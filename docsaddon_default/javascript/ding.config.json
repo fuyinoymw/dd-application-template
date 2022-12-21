@@ -1,0 +1,6 @@
+{
+  "type": "docsaddon",
+  "typescript": false,
+  "base": "./",
+  "outDir": "./"
+}

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { initScript } from 'dingtalk-docs-addon';
+import { initScript } from 'dingtalk-docs-cool-app';
 
 function App() {
   useEffect(() => {

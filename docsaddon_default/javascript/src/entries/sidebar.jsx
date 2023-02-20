@@ -1,8 +1,8 @@
 /*global Dingdocs*/
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { initView } from 'dingtalk-docs-addon';
+import { initView } from 'dingtalk-docs-cool-app';
 import { Typography, Button, Collapse, Card } from 'dingtalk-design-desktop';
 import './style.css';
 
@@ -10,10 +10,21 @@ function App() {
 
   const [listen, setListen] = useState(false);
   let offContentChanged;
+
+  // 计算签名详见钉钉开放平台开发者文档：https://open.dingtalk.com/document/isvapp/jsapi-authentication
+  const config = {
+    agentId: '', // 文档酷应用所属微应用ID
+    corpId: '', // 企业ID
+    timeStamp: '', // 生成签名的时间戳
+    nonceStr: '', // 自定义固定字符串
+    signature: '', // 签名
+    jsApiList: ['DingdocsScript.workbook.readWriteAll'], // jsapi列表
+  }
   
   useEffect(() => {
     initView({
       onReady: () => {
+        Dingdocs.workbook.host.configPermission(...config);
       },
     });
     return () => {

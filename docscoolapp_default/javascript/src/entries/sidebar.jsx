@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     initView({
       onReady: () => {
-        Dingdocs.workbook.host.configPermission(...config);
+        Dingdocs.workbook.host.configPermission(config.agentId, config.corpId, config.timeStamp, config.nonceStr, config.signature, config.jsApiList);
       },
     });
     return () => {

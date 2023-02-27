@@ -1,5 +1,5 @@
 {
-  "name": "dingtalk-docs-addon-demo",
+  "name": "dingtalk-docs-cool-app-demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -76,7 +76,7 @@
     ]
   },
   "dependencies": {
-    "dingtalk-docs-addon": "^0.0.3",
+    "dingtalk-docs-cool-app": "^0.2.0",
     "dingtalk-design-desktop": "^1.11.0",
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",

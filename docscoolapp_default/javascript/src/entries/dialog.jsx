@@ -1,7 +1,7 @@
 /*global Dingdocs*/
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { initView } from 'dingtalk-docs-addon';
+import { initView } from 'dingtalk-docs-cool-app';
 import { Card, Button, Typography } from 'dingtalk-design-desktop';
 import "./style.css";
 

@@ -1,5 +1,5 @@
 body {
-  background: none;
+  background-color: transparent !important;
 }
 .page {
   position: absolute;

@@ -17,12 +17,11 @@
   
  const ts = require('gulp-typescript');
  
- const rootPath = path.join(__dirname, './');
- const srcPath = path.resolve(rootPath, yargs.argv.src);
- const distPath = path.resolve(rootPath, yargs.argv.dist);
+ const rootPath = '.';
+ const srcPath = 'src';
+ const distPath = 'dist';
   
  const dingConfig = fse.readJsonSync(`${rootPath}/ding.config.json`);
- 
  function clean() {
    return del(distPath, {
      force: true,

@@ -238,7 +238,10 @@ module.exports = function (webpackEnv) {
     // This means they will be the "root" imports that are included in JS bundle.
     entry: {
       ...entries,
-      'script.code': paths.scriptEntry,
+      'script.code': {
+        import: paths.scriptEntry,
+        filename: 'static/js/[name].js',
+      },
     },
     output: {
       // The build folder.
